@@ -71,19 +71,19 @@ const ContactSection = () => {
       name: "GitHub",
       icon: <Github className="h-5 w-5" />,
       url: "https://github.com",
-      color: "hover:text-gray-900"
+      color: "hover:text-foreground"
     },
     {
       name: "LinkedIn", 
       icon: <Linkedin className="h-5 w-5" />,
       url: "https://linkedin.com",
-      color: "hover:text-blue-600"
+      color: "hover:text-primary"
     },
     {
       name: "Email",
       icon: <Mail className="h-5 w-5" />,
       url: "mailto:joao@exemplo.com",
-      color: "hover:text-red-500"
+      color: "hover:text-accent"
     }
   ];
 

@@ -16,7 +16,7 @@ const Footer = () => {
 
           <div className="flex items-center gap-2 text-muted-foreground">
             <span>Feito com</span>
-            <Heart className="h-4 w-4 text-red-500 fill-current" />
+            <Heart className="h-4 w-4 text-accent fill-current" />
             <span>e React</span>
           </div>
 

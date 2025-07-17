@@ -5,7 +5,7 @@ const SkillsSection = () => {
   const skillCategories = [
     {
       title: "Frontend",
-      color: "bg-blue-500",
+      color: "bg-primary",
       skills: [
         "HTML5", "CSS3", "JavaScript (ES6+)", "TypeScript", 
         "React", "Next.js", "Tailwind CSS", "Responsive Design",
@@ -14,7 +14,7 @@ const SkillsSection = () => {
     },
     {
       title: "Backend", 
-      color: "bg-green-500",
+      color: "bg-accent",
       skills: [
         "Node.js", "Express.js", "RESTful APIs", "GraphQL",
         "PostgreSQL", "MongoDB", "MySQL", "Prisma ORM",
@@ -23,7 +23,7 @@ const SkillsSection = () => {
     },
     {
       title: "Ferramentas & DevOps",
-      color: "bg-purple-500", 
+      color: "bg-secondary", 
       skills: [
         "Git & GitHub", "Docker", "AWS", "Vercel", "Netlify",
         "Linux", "CI/CD", "Testing (Jest)", "N8N", "Postman"
@@ -31,7 +31,7 @@ const SkillsSection = () => {
     },
     {
       title: "Outras Tecnologias",
-      color: "bg-orange-500",
+      color: "bg-muted",
       skills: [
         "Java", "Spring Boot", "Python", "C#", "PHP",
         "WebSocket", "Real-time Apps", "Microservices", "Agile/Scrum"
@@ -40,9 +40,9 @@ const SkillsSection = () => {
   ];
 
   const levelIndicators = [
-    { level: "Avançado", count: 8, color: "bg-green-500" },
-    { level: "Intermediário", count: 12, color: "bg-blue-500" },
-    { level: "Básico", count: 6, color: "bg-yellow-500" }
+    { level: "Avançado", count: 8, color: "bg-accent" },
+    { level: "Intermediário", count: 12, color: "bg-primary" },
+    { level: "Básico", count: 6, color: "bg-secondary" }
   ];
 
   return (
