@@ -2,78 +2,62 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    element?.scrollIntoView({
+      behavior: 'smooth'
+    });
     setIsMenuOpen(false);
   };
-
-  const menuItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'Sobre' },
-    { id: 'projects', label: 'Projetos' },
-    { id: 'skills', label: 'Habilidades' },
-    { id: 'contact', label: 'Contato' }
-  ];
-
-  return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b">
+  const menuItems = [{
+    id: 'home',
+    label: 'Home'
+  }, {
+    id: 'about',
+    label: 'Sobre'
+  }, {
+    id: 'projects',
+    label: 'Projetos'
+  }, {
+    id: 'skills',
+    label: 'Habilidades'
+  }, {
+    id: 'contact',
+    label: 'Contato'
+  }];
+  return <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b">
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-            Dev Portfolio
-          </div>
+          <div className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">evandroacorsi.dev</div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            {menuItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
+            {menuItems.map(item => <button key={item.id} onClick={() => scrollToSection(item.id)} className="text-muted-foreground hover:text-foreground transition-colors">
                 {item.label}
-              </button>
-            ))}
+              </button>)}
             <ThemeToggle />
           </div>
 
           {/* Mobile Menu Button & Theme Toggle */}
           <div className="md:hidden flex items-center space-x-2">
             <ThemeToggle />
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
+            <Button variant="ghost" size="sm" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
           </div>
         </div>
 
         {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t">
+        {isMenuOpen && <div className="md:hidden mt-4 pb-4 border-t">
             <div className="flex flex-col space-y-4 pt-4">
-              {menuItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className="text-left text-muted-foreground hover:text-foreground transition-colors"
-                >
+              {menuItems.map(item => <button key={item.id} onClick={() => scrollToSection(item.id)} className="text-left text-muted-foreground hover:text-foreground transition-colors">
                   {item.label}
-                </button>
-              ))}
+                </button>)}
             </div>
-          </div>
-        )}
+          </div>}
       </nav>
-    </header>
-  );
+    </header>;
 };
-
 export default Header;

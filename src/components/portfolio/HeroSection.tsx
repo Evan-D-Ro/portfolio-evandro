@@ -1,20 +1,20 @@
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import developerPortrait from "@/assets/developer-portrait.jpg";
-
 const HeroSection = () => {
   const scrollToContact = () => {
     const element = document.getElementById('contact');
-    element?.scrollIntoView({ behavior: 'smooth' });
+    element?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
   const scrollToAbout = () => {
     const element = document.getElementById('about');
-    element?.scrollIntoView({ behavior: 'smooth' });
+    element?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-subtle">
+  return <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-subtle">
       <div className="container mx-auto px-6 py-24">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           
@@ -24,9 +24,7 @@ const HeroSection = () => {
               <div className="space-y-2">
                 <p className="text-primary font-medium">Olá, eu sou</p>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-                  <span className="bg-gradient-primary bg-clip-text text-transparent">
-                    João Silva
-                  </span>
+                  <span className="bg-gradient-primary bg-clip-text text-transparent">Evandro Acorsi</span>
                 </h1>
                 <h2 className="text-xl md:text-2xl text-muted-foreground">
                   Desenvolvedor Web Full-Stack
@@ -75,18 +73,12 @@ const HeroSection = () => {
           <div className="flex-1 max-w-lg">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-primary rounded-full blur-3xl opacity-20 animate-pulse"></div>
-              <img
-                src={developerPortrait}
-                alt="João Silva - Desenvolvedor Full-Stack"
-                className="relative w-full h-auto rounded-2xl shadow-hover"
-              />
+              <img src={developerPortrait} alt="João Silva - Desenvolvedor Full-Stack" className="relative w-full h-auto rounded-2xl shadow-hover" />
             </div>
           </div>
 
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
