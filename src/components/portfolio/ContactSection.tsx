@@ -49,20 +49,20 @@ const ContactSection = () => {
     {
       icon: <Mail className="h-5 w-5" />,
       title: "Email",
-      value: "joao@exemplo.com",
-      href: "mailto:joao@exemplo.com"
+      value: "evandroaf10@hotmail.com",
+      href: "mailto:evandroaf10@hotmail.com"
     },
     {
       icon: <Phone className="h-5 w-5" />,
       title: "Telefone",
-      value: "+55 (11) 99999-9999",
-      href: "tel:+5511999999999"
+      value: "+55 (18) 99808-0506",
+      href: "http://wa.me/18998080506"
     },
     {
       icon: <MapPin className="h-5 w-5" />,
       title: "Localização",
-      value: "São Paulo, SP - Brasil",
-      href: "#"
+      value: "Rancharia, SP - Brasil",
+      href: "https://www.google.com/maps/place/Rancharia,+SP,+19600-000"
     }
   ];
 
@@ -70,50 +70,50 @@ const ContactSection = () => {
     {
       name: "GitHub",
       icon: <Github className="h-5 w-5" />,
-      url: "https://github.com",
+      url: "https://github.com/Evan-D-Ro",
       color: "hover:text-foreground"
     },
     {
-      name: "LinkedIn", 
+      name: "LinkedIn",
       icon: <Linkedin className="h-5 w-5" />,
-      url: "https://linkedin.com",
+      url: "https://linkedin.com/in/evandro-acorsi-filho-72019224b",
       color: "hover:text-primary"
     },
     {
       name: "Email",
       icon: <Mail className="h-5 w-5" />,
-      url: "mailto:joao@exemplo.com",
+      url: "mailto:evandroaf10@hotmail.com",
       color: "hover:text-accent"
     }
   ];
 
   return (
     <section id="contact" className="py-24 bg-muted/30">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-2">
         <div className="max-w-6xl mx-auto">
-          
+
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Entre em <span className="bg-gradient-primary bg-clip-text text-transparent">Contato</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Vamos conversar sobre seu próximo projeto! 
+              Vamos conversar sobre seu próximo projeto!
               Estou sempre aberto a novas oportunidades e desafios.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            
+
             {/* Contact Form */}
-            <Card className="shadow-card bg-gradient-card">
+            <Card className="shadow-card bg-gradient-card flex justify-center items-center flex-col">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Send className="h-5 w-5" />
                   Envie uma Mensagem
                 </CardTitle>
               </CardHeader>
-              
+
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-4">
@@ -137,7 +137,7 @@ const ContactSection = () => {
                       />
                     </div>
                   </div>
-                  
+
                   <div>
                     <Input
                       name="subject"
@@ -147,18 +147,18 @@ const ContactSection = () => {
                       required
                     />
                   </div>
-                  
+
                   <div>
                     <Textarea
                       name="message"
                       placeholder="Sua mensagem..."
-                      className="min-h-[120px]"
+                      className="min-h-[240px]"
                       value={formData.message}
                       onChange={handleInputChange}
                       required
                     />
                   </div>
-                  
+
                   <Button
                     type="submit"
                     size="lg"
@@ -174,13 +174,13 @@ const ContactSection = () => {
 
             {/* Contact Info */}
             <div className="space-y-8">
-              
+
               {/* Contact Information */}
               <Card className="shadow-card bg-gradient-card">
                 <CardHeader>
                   <CardTitle>Informações de Contato</CardTitle>
                 </CardHeader>
-                
+
                 <CardContent className="space-y-4">
                   {contactInfo.map((info, index) => (
                     <div key={index} className="flex items-center gap-4">
@@ -189,7 +189,7 @@ const ContactSection = () => {
                       </div>
                       <div>
                         <p className="font-medium">{info.title}</p>
-                        <a 
+                        <a
                           href={info.href}
                           className="text-muted-foreground hover:text-primary transition-colors"
                         >
@@ -206,7 +206,7 @@ const ContactSection = () => {
                 <CardHeader>
                   <CardTitle>Redes Sociais</CardTitle>
                 </CardHeader>
-                
+
                 <CardContent>
                   <div className="flex gap-4">
                     {socialLinks.map((social) => (
@@ -217,7 +217,7 @@ const ContactSection = () => {
                         asChild
                         className="hover:shadow-card transition-all"
                       >
-                        <a 
+                        <a
                           href={social.url}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -229,9 +229,9 @@ const ContactSection = () => {
                       </Button>
                     ))}
                   </div>
-                  
+
                   <p className="text-sm text-muted-foreground mt-4">
-                    Conecte-se comigo nas redes sociais para acompanhar meus projetos 
+                    Conecte-se comigo nas redes sociais para acompanhar meus projetos
                     e conteúdo sobre desenvolvimento web.
                   </p>
                 </CardContent>
@@ -242,7 +242,7 @@ const ContactSection = () => {
                 <CardContent className="p-6 text-center">
                   <h3 className="font-semibold mb-2">Disponível para Projetos</h3>
                   <p className="text-sm opacity-90">
-                    Estou aberto a novas oportunidades de trabalho freelance 
+                    Estou aberto a novas oportunidades de trabalho freelance
                     ou colaborações em projetos interessantes.
                   </p>
                 </CardContent>
