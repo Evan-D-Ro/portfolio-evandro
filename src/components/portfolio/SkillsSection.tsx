@@ -18,7 +18,7 @@ const SkillsSection = () => {
       skills: [
         "Java", "Spring Boot", "Node.js", "Express.js", "ASP.NET Core", "RESTful APIs",
         "PostgreSQL", "MongoDB", "MySQL",
-        "Authentication", "JWT", "API Security"
+        "Authentication", "JWT", "API Security", "MVC", "Princípios SOLID"
       ]
     },
     {
@@ -33,16 +33,16 @@ const SkillsSection = () => {
       title: "Outras Tecnologias",
       color: "bg-muted",
       skills: [
-        "Laravel & Lumen", "C#", "PHP",
-        "WebSocket", "Solid", "Agile/Scrum", "MVC"
+        "Laravel & Lumen", "PHP",
+        "WebSocket", "Agile/Scrum"
       ]
     }
   ];
 
   const levelIndicators = [
-    { level: "Avançado", count: 8, color: "bg-accent" },
-    { level: "Intermediário", count: 12, color: "bg-primary" },
-    { level: "Básico", count: 6, color: "bg-secondary" }
+    { level: "Avançado", count: 14, color: "bg-accent" },
+    { level: "Intermediário", count: 11, color: "bg-primary" },
+    { level: "Básico", count: 13, color: "bg-secondary" }
   ];
 
   return (
