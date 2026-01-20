@@ -1,6 +1,6 @@
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import developerPortrait from "@/assets/developer-portrait.jpg";
+import developerPortrait from "@/assets/developer-portrait.png";
 const HeroSection = () => {
   const scrollToContact = () => {
     const element = document.getElementById('contact');
@@ -55,11 +55,11 @@ const HeroSection = () => {
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
-              <Button variant="ghost" size="sm" asChild>
+              {/* <Button variant="ghost" size="sm" asChild>
                 <a href="https://linkedin.com/in/evandro-acorsi-filho-72019224b" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="h-5 w-5" />
                 </a>
-              </Button>
+              </Button> */}
               <Button variant="ghost" size="sm" asChild>
                 <a href="mailto:evandroaf10@hotmail.com">
                   <Mail className="h-5 w-5" />
